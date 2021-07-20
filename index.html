@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html lang = "en-US">
+<head>
+    <meta charset = "UTF-8">
+    <title>Lunar Lander</title>
+    
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+</head>
+<body onload = "MyGame.game.initialize();">
+    <h1 class = "title"> Lunar Lander </h1>
+    <div id = "gameContainer">
+        <div id = "mainMenuScreen" class = "screen">
+            <ul class = "menu">
+                <li><button id = "newGameButton">New&nbsp;Game</button></li>
+                <li><button id = "highScoreButton">High&nbsp;Scores</button></li>
+                <li><button id = "helpButton">Options and Help</button></li>
+                <li><button id = "creditButton">Credits</button></li>
+            </ul>
+        </div>
+        <div id = "gameScreen" class = "screen">
+            <canvas id = "gameCanvas" width = "1600" height = "800"></canvas>
+        </div>
+        <div id = "highScoreScreen" class = "screen">
+            <h1>High Scores</h1>
+            <ol id=highScoresList></ol>
+            <ul class = "menu">
+                <li><button id = "highScoreBackButton">Back</button></li>
+            </ul>
+        </div>
+        <div id = "helpScreen" class = "screen">
+            <h1>Help</h1>
+            <p>The goal of moon lander is to land your ship on a landing pad before you run out of fuel. 
+                Tilt your ship so that it points the direction you want to travel, and use your thruster to slow your descent
+                <h3>Controls: </h3>
+                <ul class = "menu2">
+                    <li><label for="thrust"> Thruster: </label><button id = "thrust" value="ArrowUp">ArrowUp</button></li>
+                    <li><label for="leftTilt"> Left Tilt: </label><button id = "leftTilt" value="ArrowLeft">ArrowLeft</button></li>
+                    <li><label for="rightTilt"> Right Tilt: </label><button id = "rightTilt" value="ArrowRight">ArrowRight</button></li>
+                </ul>
+            </p>
+            <ul class = "menu">
+                <li><button id = "helpBackButton">Back</button></li>
+            </ul>
+        </div>
+        <div id = "creditScreen" class = "screen">
+            <h1>Credits</h1>
+            <p>Developed by</p>
+            <p>Michael Harrop</p>
+            <ul class = "menu">
+                <li><button id = "creditBackButton">Back</button></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        let canvas = document.getElementById('gameCanvas');
+        let context = canvas.getContext('2d');
+        let dpi = window.devicePixelRatio;
+
+        let MyGame = {
+            status : "Initializing",
+            screens : {},
+            input: {},
+            objects: {},
+            systems: [],
+            levels: {},
+            render: []
+        };
+    </script>
+    
+    <script src = "scripts/random.js"></script>
+    
+
+    <script src = "scripts/render/core.js"></script>
+    <script src = "scripts/render/ship.js"></script>
+    <script src = "scripts/render/text.js"></script>
+    <script src = "scripts/render/land.js"></script>
+    <script src = "scripts/render/particle-system.js"></script>
+    
+    <script src = "scripts/systems/thruster.js"></script>
+    <script src = "scripts/systems/explosion.js"></script>
+    <script src = "scripts/objects/ship.js"></script>
+    <script src = "scripts/objects/text.js"></script>
+    <script src = "scripts/objects/land.js"></script>
+
+    <script src = "scripts/levels/levelMaker.js"></script>
+    <script src = "scripts/systems/sound.js"></script>
+    
+    <script src = "scripts/game.js"></script>
+    
+    <script src = "scripts/screens/mainMenu.js"></script>
+    <script src = "scripts/screens/highScore.js"></script>
+    <script src = "scripts/screens/help.js"></script>
+    <script src = "scripts/screens/credit.js"></script>
+
+    <script src = "scripts/keyboardInput.js"></script>
+    <script src = "scripts/lunarLander.js"></script>
+</body>
+</html>

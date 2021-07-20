@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+}
+
+.white {
+    color: #ffffff;
+}
+label {
+    font-family: Arial, sans-serif;
+    font-size: 0.6em;
+}
+
+#gameContainer {
+    margin: auto;
+    display: block;
+    height: 100%;
+    width: 90%;
+    border-style: solid;
+    /* border-width: 1px; */
+    background-color: rgb(211, 211,211);
+    font-size: 40px;
+}
+
+#gameContainer .screen {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#gameContainer .screen.active {
+    display: block;
+}
+
+#mainMenuScreen {
+    /* padding-top: 1em; */
+    cursor: pointer;
+    font-size: 0.75em;
+}
+
+ul.menu {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul.menu li {
+    margin: 0.8em;
+}
+
+ul.menu li button {
+    font-family: Arial, sans-serif;
+    font-size: 0.6em;
+    color: #ffffff;
+    text-shadow: -1px -1px 0 #000;
+    width: 10em;
+    height: 1.5em;
+    background: #00df4a;
+    border: 0.1em solid rgb(0, 0, 0);
+    border-radius: 0.5em;
+    box-shadow: 0.2em 0.2em 0.3em rgb(0, 0, 0);
+}
+
+ul.menu2 {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul.menu2 li button {
+    font-family: Arial, sans-serif;
+    font-size: 0.4em;
+    color: #ffffff;
+    text-shadow: -1px -1px 0 #000;
+    width: 10em;
+    height: 1.5em;
+    background: #00df4a;
+    border: 0.1em solid rgb(0, 0, 0);
+    border-radius: 0.5em;
+    box-shadow: 0.2em 0.2em 0.3em rgb(0, 0, 0);
+}
+
+ul.menu li button:hover {
+    background: #49f566;
+}
+
+ul.menu li button:active {
+    color: #CECEF6;
+    background: rgb(0, 136, 29);
+}
+
+#gameContainer div h1 {
+    font-size: 1em;
+    text-align: center;
+}
+
+#gameContainer h2 {
+    font-size: 0.8em;
+    text-align: center;
+}
+
+#gameContainer h3 {
+    font-size: 0.7em;
+    text-align: center;
+}
+
+#gameContainer div p {
+    font-size: 0.5em;
+}
+
+#highScoreScreen ol {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#gameContainer div canvas {
+    width: 100%;
+    height: 100%;
+}
+
+#creditScreen p {
+    text-align: center;
+}
+
+#helpScreen p {
+    text-align: center;
+}
+
+.title{
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 350%;
+}
+
